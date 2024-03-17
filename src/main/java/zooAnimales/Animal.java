@@ -22,6 +22,15 @@ public class Animal {
 		this.zona=zona;
 		Animal.totalAnimales++;
 	}
+	
+	public Animal(String nombre, int edad, String habitat, String genero) {
+		this.nombre=nombre;
+		this.edad=edad;
+		this.habitat=habitat;
+		this.genero=genero;
+		this.zona=null;
+		Animal.totalAnimales++;
+	}
 
 	public int getTotalAnimales() {
 		return totalAnimales;

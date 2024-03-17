@@ -26,6 +26,17 @@ public class Pez extends Animal{
 		this.cantidadAletas=cantidadAletas;
 	}
 	
+	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
+		setNombre(nombre);
+		setEdad(edad);
+		setHabitat(habitat);
+		setGenero(genero);
+		setZona(null);
+		Pez.listado.add(this);
+		this.colorEscamas=colorEscamas;
+		this.cantidadAletas=cantidadAletas;
+	}
+	
 	@Override
 	public String movimiento() {
 		return "nadar";

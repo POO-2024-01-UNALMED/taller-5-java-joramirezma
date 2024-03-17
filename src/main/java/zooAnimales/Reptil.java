@@ -26,6 +26,17 @@ public class Reptil extends Animal{
 		this.largoCola=largoCola;
 	}
 	
+	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
+		setNombre(nombre);
+		setEdad(edad);
+		setHabitat(habitat);
+		setGenero(genero);
+		setZona(null);
+		Reptil.listado.add(this);
+		this.colorEscamas=colorEscamas;
+		this.largoCola=largoCola;
+	}
+	
 	@Override
 	public String movimiento() {
 		return "reptar";
