@@ -98,7 +98,7 @@ public class Animal {
 		return "desplazarse";
 	}
 	
-	public String totalPorTipo() {
+	public static String totalPorTipo() {
 		return "Mamiferos: " + Mamifero.getListado().size() + 
 				"\nAves: " + Ave.getListado().size() + 
 				"\nReptiles: " + Reptil.getListado().size() + 
