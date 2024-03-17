@@ -12,8 +12,7 @@ public class Mamifero extends Animal{
 	public Mamifero() {
 	}
 	
-	public Mamifero(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona zona, Mamifero[] listado, int caballos, int leones, boolean pelaje, int patas) {
-		setTotalAnimales(totalAnimales);
+	public Mamifero(String nombre, int edad, String habitat, String genero, Zona zona, Mamifero[] listado, int caballos, int leones, boolean pelaje, int patas) {
 		setNombre(nombre);
 		setEdad(edad);
 		setHabitat(habitat);

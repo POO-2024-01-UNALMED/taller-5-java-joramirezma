@@ -12,8 +12,7 @@ public class Reptil extends Animal{
 	public Reptil() {
 	}
 	
-	public Reptil(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona zona, Reptil[] listado, int iguanas, int serpientes, String colorEscamas, int largoCola) {
-		setTotalAnimales(totalAnimales);
+	public Reptil(String nombre, int edad, String habitat, String genero, Zona zona, Reptil[] listado, int iguanas, int serpientes, String colorEscamas, int largoCola) {
 		setNombre(nombre);
 		setEdad(edad);
 		setHabitat(habitat);

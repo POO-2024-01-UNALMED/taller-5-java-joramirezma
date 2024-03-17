@@ -11,8 +11,7 @@ public class Ave extends Animal{
 	public Ave() {
 	}
 	
-	public Ave(int totalAnimales, String nombre, int edad, String habitat, String genero, Zona zona, Ave[] listado, int halcones, int aguilas, String colorPlumas) {
-		setTotalAnimales(totalAnimales);
+	public Ave(String nombre, int edad, String habitat, String genero, Zona zona, Ave[] listado, int halcones, int aguilas, String colorPlumas) {
 		setNombre(nombre);
 		setEdad(edad);
 		setHabitat(habitat);
