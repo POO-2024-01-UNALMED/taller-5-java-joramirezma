@@ -88,4 +88,12 @@ public class Animal {
 	public String movimiento() {
 		return "desplazarse";
 	}
+	
+	public String totalPorTipo() {
+		return "Mamiferos: " + Mamifero.getListado().size() + 
+				"\nAves: " + Ave.getListado().size() + 
+				"\nReptiles: " + Reptil.getListado().size() + 
+				"\nPeces: " + Pez.getListado().size() + 
+				"\nAnfibios: " + Anfibio.getListado().size();
+	}
 }
