@@ -6,8 +6,8 @@ import gestion.Zona;
 
 public class Ave extends Animal{
 	private static ArrayList<Ave> listado;
-	public int halcones;
-	public int aguilas;
+	public static int halcones;
+	public static int aguilas;
 	private String colorPlumas;
 	
 	public Ave() {
@@ -37,20 +37,20 @@ public class Ave extends Animal{
 		Ave.listado = listado;
 	}
 
-	public int getHalcones() {
+	public static int getHalcones() {
 		return halcones;
 	}
 
-	public void setHalcones(int halcones) {
-		this.halcones = halcones;
+	public static void setHalcones(int halcones) {
+		Ave.halcones = halcones;
 	}
 
-	public int getAguilas() {
+	public static int getAguilas() {
 		return aguilas;
 	}
 
-	public void setAguilas(int aguilas) {
-		this.aguilas = aguilas;
+	public static void setAguilas(int aguilas) {
+		Ave.aguilas=aguilas;
 	}
 
 	public String getColorPlumas() {
@@ -61,5 +61,14 @@ public class Ave extends Animal{
 		this.colorPlumas = colorPlumas;
 	}
 	
+	public static Ave crearAguila(String nombre, int edad, String genero, Zona zona) {
+		setAguilas(getAguilas() + 1);
+		return new Ave(nombre,edad,"montanas",genero,zona,"blanco y amarillo");
+	}
+	
+	public static Ave crearHalcon(String nombre, int edad, String genero, Zona zona) {
+		setHalcones(getHalcones() + 1);
+		return new Ave(nombre,edad,"montanas",genero,zona,"cafe glorioso");
+	}
 	
 }

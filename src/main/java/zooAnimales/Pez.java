@@ -6,8 +6,8 @@ import gestion.Zona;
 
 public class Pez extends Animal{
 	private static ArrayList<Pez> listado;
-	public int salmones;
-	public int bacalaos;
+	public static int salmones;
+	public static int bacalaos;
 	private String colorEscamas;
 	private int cantidadAletas;
 	
@@ -15,15 +15,13 @@ public class Pez extends Animal{
 		Pez.listado.add(this);
 	}
 	
-	public Pez(String nombre, int edad, String habitat, String genero, Zona zona, int salmones, int bacalaos, String colorEscamas, int cantidadAletas) {
+	public Pez(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int cantidadAletas) {
 		setNombre(nombre);
 		setEdad(edad);
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(zona);
 		Pez.listado.add(this);
-		this.salmones=salmones;
-		this.bacalaos=bacalaos;
 		this.colorEscamas=colorEscamas;
 		this.cantidadAletas=cantidadAletas;
 	}

@@ -6,8 +6,8 @@ import gestion.Zona;
 
 public class Reptil extends Animal{
 	private static ArrayList<Reptil> listado;
-	public int iguanas;
-	public int serpientes;
+	public static int iguanas;
+	public static int serpientes;
 	private String colorEscamas;
 	private int largoCola;
 	
@@ -15,15 +15,13 @@ public class Reptil extends Animal{
 		Reptil.listado.add(this);
 	}
 	
-	public Reptil(String nombre, int edad, String habitat, String genero, Zona zona, int iguanas, int serpientes, String colorEscamas, int largoCola) {
+	public Reptil(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int largoCola) {
 		setNombre(nombre);
 		setEdad(edad);
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(zona);
 		Reptil.listado.add(this);
-		this.iguanas=iguanas;
-		this.serpientes=serpientes;
 		this.colorEscamas=colorEscamas;
 		this.largoCola=largoCola;
 	}
@@ -41,20 +39,20 @@ public class Reptil extends Animal{
 		Reptil.listado = listado;
 	}
 
-	public int getIguanas() {
+	public static int getIguanas() {
 		return iguanas;
 	}
 
-	public void setIguanas(int iguanas) {
-		this.iguanas = iguanas;
+	public static void setIguanas(int iguanas) {
+		Reptil.iguanas = iguanas;
 	}
 
-	public int getSerpientes() {
+	public static int getSerpientes() {
 		return serpientes;
 	}
 
-	public void setSerpientes(int serpientes) {
-		this.serpientes = serpientes;
+	public static void setSerpientes(int serpientes) {
+		Reptil.serpientes = serpientes;
 	}
 
 	public String getColorEscamas() {
@@ -73,5 +71,14 @@ public class Reptil extends Animal{
 		this.largoCola = largoCola;
 	}
 	
+	public static Reptil crearIguana(String nombre, int edad, String genero, Zona zona) {
+		setIguanas(getIguanas() + 1);
+		return new Reptil(nombre,edad,"humedal",genero,zona,"verde",3);
+	}
+	
+	public static Reptil crearSerpiente(String nombre, int edad, String genero, Zona zona) {
+		setSerpientes(getSerpientes() + 1);
+		return new Reptil(nombre,edad,"jungla",genero,zona,"blanco",1);
+	}
 	
 }
