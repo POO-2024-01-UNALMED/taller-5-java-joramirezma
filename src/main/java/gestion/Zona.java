@@ -1,7 +1,7 @@
 package gestion;
 
 public class Zona {
-	String nombre;
-	Zoologico zoo;
-	Animal[] animal;
+	private String nombre;
+	private Zoologico zoo;
+	private Animal[] animal;
 }
