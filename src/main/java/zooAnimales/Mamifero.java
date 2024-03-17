@@ -36,22 +36,6 @@ public class Mamifero extends Animal{
 		Mamifero.listado = listado;
 	}
 
-	public static int getCaballos() {
-		return caballos;
-	}
-
-	public static void setCaballos(int caballos) {
-		Mamifero.caballos=caballos;
-	}
-
-	public static int getLeones() {
-		return Mamifero.leones;
-	}
-
-	public static void setLeones(int leones) {
-		Mamifero.leones=leones;
-	}
-
 	public boolean isPelaje() {
 		return pelaje;
 	}
@@ -69,13 +53,17 @@ public class Mamifero extends Animal{
 	}
 	
 	public static Mamifero crearCaballo(String nombre, int edad, String genero, Zona zona) {
-		setCaballos(getCaballos() + 1);
+		Mamifero.caballos++;
 		return new Mamifero(nombre,edad,"pradera",genero,zona,true,4);
 	}
 	
 	public static Mamifero crearLeon(String nombre, int edad, String genero, Zona zona) {
-		setLeones(getLeones() + 1);
+		Mamifero.leones++;
 		return new Mamifero(nombre,edad,"selva",genero,zona,true,4);
+	}
+	
+	public static int cantidadMamiferos() {
+		return Mamifero.listado.size();
 	}
 	
 }

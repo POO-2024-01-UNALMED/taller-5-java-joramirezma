@@ -37,22 +37,6 @@ public class Ave extends Animal{
 		Ave.listado = listado;
 	}
 
-	public static int getHalcones() {
-		return halcones;
-	}
-
-	public static void setHalcones(int halcones) {
-		Ave.halcones = halcones;
-	}
-
-	public static int getAguilas() {
-		return aguilas;
-	}
-
-	public static void setAguilas(int aguilas) {
-		Ave.aguilas=aguilas;
-	}
-
 	public String getColorPlumas() {
 		return colorPlumas;
 	}
@@ -62,13 +46,16 @@ public class Ave extends Animal{
 	}
 	
 	public static Ave crearAguila(String nombre, int edad, String genero, Zona zona) {
-		setAguilas(getAguilas() + 1);
+		Ave.aguilas++;
 		return new Ave(nombre,edad,"montanas",genero,zona,"blanco y amarillo");
 	}
 	
 	public static Ave crearHalcon(String nombre, int edad, String genero, Zona zona) {
-		setHalcones(getHalcones() + 1);
+		Ave.halcones++;
 		return new Ave(nombre,edad,"montanas",genero,zona,"cafe glorioso");
 	}
 	
+	public static int cantidadAves() {
+		return Ave.listado.size();
+	}
 }

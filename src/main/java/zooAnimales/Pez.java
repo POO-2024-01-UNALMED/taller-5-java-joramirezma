@@ -38,23 +38,7 @@ public class Pez extends Animal{
 	public static void setListado(ArrayList<Pez> listado) {
 		Pez.listado = listado;
 	}
-
-	public int getSalmones() {
-		return salmones;
-	}
-
-	public void setSalmones(int salmones) {
-		this.salmones = salmones;
-	}
-
-	public int getBacalaos() {
-		return bacalaos;
-	}
-
-	public void setBacalaos(int bacalaos) {
-		this.bacalaos = bacalaos;
-	}
-
+	
 	public String getColorEscamas() {
 		return colorEscamas;
 	}
@@ -71,5 +55,17 @@ public class Pez extends Animal{
 		this.cantidadAletas = cantidadAletas;
 	}
 	
+	public static Pez crearBacalao(String nombre, int edad, String genero, Zona zona) {
+		Pez.bacalaos++;
+		return new Pez(nombre,edad,"oceano",genero,zona,"gris",6);
+	}
 	
+	public static Pez crearSalmon(String nombre, int edad, String genero, Zona zona) {
+		Pez.salmones++;
+		return new Pez(nombre,edad,"oceano",genero,zona,"rojo",6);
+	}
+	
+	public static int cantidadPeces() {
+		return Pez.listado.size();
+	}
 }
