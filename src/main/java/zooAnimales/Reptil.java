@@ -60,9 +60,19 @@ public class Reptil extends Animal{
 		return new Reptil(nombre,edad,"humedal",genero,zona,"verde",3);
 	}
 	
+	public static Reptil crearIguana(String nombre, int edad, String genero) {
+		Reptil.iguanas++;
+		return new Reptil(nombre,edad,"humedal",genero,null,"verde",3);
+	}
+	
 	public static Reptil crearSerpiente(String nombre, int edad, String genero, Zona zona) {
 		Reptil.serpientes++;
 		return new Reptil(nombre,edad,"jungla",genero,zona,"blanco",1);
+	}
+	
+	public static Reptil crearSerpiente(String nombre, int edad, String genero) {
+		Reptil.serpientes++;
+		return new Reptil(nombre,edad,"jungla",genero,null,"blanco",1);
 	}
 	
 	public static int cantidadReptiles() {
