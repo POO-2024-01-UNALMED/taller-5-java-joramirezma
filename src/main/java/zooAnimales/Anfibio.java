@@ -24,6 +24,9 @@ public class Anfibio extends Animal{
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(zona);
+		if (Anfibio.listado == null) {
+	        Anfibio.listado = new ArrayList<>();
+	    }
 		Anfibio.listado.add(this);
 		this.colorPiel=colorPiel;
 		this.venenoso=venenoso;
@@ -35,6 +38,9 @@ public class Anfibio extends Animal{
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(null);
+		if (Anfibio.listado == null) {
+	        Anfibio.listado = new ArrayList<>();
+	    }
 		Anfibio.listado.add(this);
 		this.colorPiel=colorPiel;
 		this.venenoso=venenoso;
