@@ -8,18 +8,25 @@ public class Zoologico {
 	private ArrayList<Zona> zonas;
 	
 	public Zoologico() {
+		if (this.zonas == null) {
+			this.zonas = new ArrayList<>();
+		}
 	}
 	
 	public Zoologico(String nombre, String ubicacion, ArrayList<Zona> zonas) {
 		this.nombre=nombre;
 		this.ubicacion=ubicacion;
+		if (this.zonas == null) {
+			this.zonas = new ArrayList<>();
+		}
 		this.zonas=zonas;
+		
 	}
 
 	public Zoologico(String nombre, String ubicacion) {
 		this.nombre=nombre;
 		this.ubicacion=ubicacion;
-		this.zonas=null;
+		this.zonas= new ArrayList<>();
 	}
 	
 	public void agregarZonas(Zona...zonas ) {

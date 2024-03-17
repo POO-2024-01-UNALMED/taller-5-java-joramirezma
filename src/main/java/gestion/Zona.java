@@ -10,18 +10,24 @@ public class Zona {
 	private ArrayList<Animal> animales;
 	
 	public Zona(){
+		if (this.animales == null) {
+			this.animales = new ArrayList<>();
+		}
 	}
 	
 	public Zona(String nombre, Zoologico zoo, ArrayList<Animal> animales) {
 		this.nombre=nombre;
 		this.zoo=zoo;
+		if (this.animales == null) {
+			this.animales = new ArrayList<>();
+		}
 		this.animales=animales;
 	}
 	
 	public Zona(String nombre, Zoologico zoo) {
 		this.nombre=nombre;
 		this.zoo=zoo;
-		this.animales=null;
+		this.animales= new ArrayList<>();
 	}
 	
 	public void agregarAnimales(Animal animal) {
