@@ -1,5 +1,7 @@
 package zooAnimales;
 
+import gestion.Zona;
+
 public class Ave extends Animal{
 	private Ave[] listado;
 	public int halcones;
