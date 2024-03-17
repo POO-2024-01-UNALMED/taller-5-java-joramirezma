@@ -18,6 +18,12 @@ public class Zona {
 		this.animales=animales;
 	}
 	
+	public Zona(String nombre, Zoologico zoo) {
+		this.nombre=nombre;
+		this.zoo=zoo;
+		this.animales=null;
+	}
+	
 	public void agregarAnimales(Animal animal) {
 		this.animales.add(animal);
 	}
