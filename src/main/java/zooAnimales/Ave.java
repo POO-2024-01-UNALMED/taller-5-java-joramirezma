@@ -11,6 +11,9 @@ public class Ave extends Animal{
 	private String colorPlumas;
 	
 	public Ave() {
+		if (Ave.listado == null) {
+			Ave.listado = new ArrayList<>();
+		}
 		Ave.listado.add(this);
 	}
 	

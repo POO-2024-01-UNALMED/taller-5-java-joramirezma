@@ -12,6 +12,9 @@ public class Pez extends Animal{
 	private int cantidadAletas;
 	
 	public Pez() {
+		if (Pez.listado == null) {
+			Pez.listado = new ArrayList<>();
+		}
 		Pez.listado.add(this);
 	}
 	

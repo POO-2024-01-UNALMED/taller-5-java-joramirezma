@@ -12,6 +12,9 @@ public class Anfibio extends Animal{
 	private boolean venenoso;
 	
 	public Anfibio() {
+		if (Anfibio.listado == null) {
+	        Anfibio.listado = new ArrayList<>();
+	    }
 		Anfibio.listado.add(this);
 	}
 	

@@ -12,6 +12,9 @@ public class Reptil extends Animal{
 	private int largoCola;
 	
 	public Reptil() {
+		if (Reptil.listado == null) {
+			Reptil.listado = new ArrayList<>();
+		}
 		Reptil.listado.add(this);
 	}
 	

@@ -12,6 +12,9 @@ public class Mamifero extends Animal{
 	private int patas;
 	
 	public Mamifero() {
+		if (Mamifero.listado == null) {
+			Mamifero.listado = new ArrayList<>();
+		}
 		Mamifero.listado.add(this);
 	}
 	
