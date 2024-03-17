@@ -24,6 +24,9 @@ public class Reptil extends Animal{
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(zona);
+		if (Reptil.listado == null) {
+			Reptil.listado = new ArrayList<>();
+		}
 		Reptil.listado.add(this);
 		this.colorEscamas=colorEscamas;
 		this.largoCola=largoCola;
@@ -35,6 +38,9 @@ public class Reptil extends Animal{
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(null);
+		if (Reptil.listado == null) {
+			Reptil.listado = new ArrayList<>();
+		}
 		Reptil.listado.add(this);
 		this.colorEscamas=colorEscamas;
 		this.largoCola=largoCola;

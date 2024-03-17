@@ -24,6 +24,10 @@ public class Pez extends Animal{
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(zona);
+		if (Pez.listado == null) {
+			Pez.listado = new ArrayList<>();
+		}
+		Pez.listado.add(this);
 		Pez.listado.add(this);
 		this.colorEscamas=colorEscamas;
 		this.cantidadAletas=cantidadAletas;
@@ -35,6 +39,10 @@ public class Pez extends Animal{
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(null);
+		if (Pez.listado == null) {
+			Pez.listado = new ArrayList<>();
+		}
+		Pez.listado.add(this);
 		Pez.listado.add(this);
 		this.colorEscamas=colorEscamas;
 		this.cantidadAletas=cantidadAletas;

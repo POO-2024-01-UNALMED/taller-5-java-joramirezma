@@ -24,6 +24,9 @@ public class Mamifero extends Animal{
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(zona);
+		if (Mamifero.listado == null) {
+			Mamifero.listado = new ArrayList<>();
+		}
 		Mamifero.listado.add(this);
 		this.pelaje=pelaje;
 		this.patas=patas;
@@ -35,6 +38,9 @@ public class Mamifero extends Animal{
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(null);
+		if (Mamifero.listado == null) {
+			Mamifero.listado = new ArrayList<>();
+		}
 		Mamifero.listado.add(this);
 		this.pelaje=pelaje;
 		this.patas=patas;

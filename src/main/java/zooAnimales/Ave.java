@@ -23,6 +23,9 @@ public class Ave extends Animal{
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(zona);
+		if (Ave.listado == null) {
+			Ave.listado = new ArrayList<>();
+		}
 		Ave.listado.add(this);
 		this.colorPlumas=colorPlumas;
 	}
@@ -33,6 +36,9 @@ public class Ave extends Animal{
 		setHabitat(habitat);
 		setGenero(genero);
 		setZona(null);
+		if (Ave.listado == null) {
+			Ave.listado = new ArrayList<>();
+		}
 		Ave.listado.add(this);
 		this.colorPlumas=colorPlumas;
 	}
